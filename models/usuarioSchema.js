@@ -1,10 +1,10 @@
 module.exports=function UsuarioSchema(){
   var mongoose=require('../db').mongoose;
   var schema={
-    nombre:{type:String, required=true},
-    nickname:{type:String, required=true},
-    id:{type:String, required=true},
-    contrasenia:{type:String, required=true},
+    nombre: { type : string, required:true} ,
+    nickname:{type:String, required:true},
+    id:{type:String, required:true},
+    contrasenia:{type:String, required:true},
 
 
   }

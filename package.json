@@ -1,5 +1,5 @@
 {
-  "name": "REST-api",
+  "name": "espol.trek.api",
   "version": "0.1.0",
   "scripts": {
     "start": "node app.js"
@@ -10,5 +10,17 @@
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
-  }
+  },
+  "description": "asdfads",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bernix01/espoltrek.api.git"
+  },
+  "author": "María Belén Guaranda y Guillermo Bernal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bernix01/espoltrek.api/issues"
+  },
+  "homepage": "https://github.com/Bernix01/espoltrek.api#readme"
 }

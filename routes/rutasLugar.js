@@ -1,6 +1,6 @@
 module.exports = function(app) {
-	var studentController= require('../controllers/studentController');
-	var lugarController=require('../controller/lugarController');
+	var usuarioController= require('../controllers/usuarioController');
+	var lugarController=require('../controllers/lugarController');
 	app.get('/', function(req, res, next) {
 		return res.send("WELCOME TO REST API");
 	});
@@ -8,6 +8,6 @@ module.exports = function(app) {
 		return res.send("another page hehe");
 	});
 
-	app.post('/createStudent',studentController.createStudent); //Create Student API
-	app.get('/getStudent',studentController.getStudent); //Gets ALL students details API
+	app.post('/getUsuario',usuarioController.createUsuario); //Create Student API
+	app.get('/getLugar',lugarController.getLugares); //Gets ALL students details API
 };
