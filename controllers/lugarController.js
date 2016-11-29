@@ -3,14 +3,14 @@
 function lugarController () {
 	var Lugar = require('../models/lugarSchema');
 
-	// Creating New Student
+	// Creating New Lugar
 	this.createLugar = function (req, res, next) {
 		var nombre = req.params.nombre;
-		var descripcion = req.params.email;
-		var etiquetas = req.params.id;
+		var descripcion = req.params.descripcion;
+		var etiquetas = req.params.etiquetas;
 		var contrasenia = req.params.contrasenia;
 
-		Student.create({nombre:nombre,email:email,id:id,contrasenia:contrasenia}, function(err, result) {
+		Lugar.create({nombre:nombre,email:email,id:id,contrasenia:contrasenia}, function(err, result) {
 			if (err) {
 				console.log(err);
 				return res.send({'error':err});
