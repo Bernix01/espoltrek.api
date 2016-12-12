@@ -26,8 +26,9 @@ var LugarSchema = function() {
             required: false
         }
     };
-    var lugarSchema = mongoose.Schema(schema);
+    var lugarSchema = new mongoose.Schema(schema);
     var Lugar = mongoose.model('Lugar', lugarSchema);
     return Lugar;
 };
-module.exports = LugarSchema;
+module.exports = (LugarSchema)();
+

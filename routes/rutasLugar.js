@@ -8,6 +8,10 @@ module.exports = function(app) {
         return res.send("another page hehe");
     });
 
-    app.post('/getUsuario', usuarioController.createUsuario); //Create Student API
-    app.get('/getLugar', lugarController.getLugares); //Gets ALL students details API
+    //app.post('/getUsuario', usuarioController.createUsuario); //Create Student API
+    app.get('/lugar', lugarController.getLugares); //Gets ALL students details API
+    app.post('/lugar', lugarController.createLugar); //Gets ALL students details API
+    app.post('/lugar/:id/tags', lugarController.addtag); //Gets ALL students details API
+    //app.get('/lugar/:id',lugarController.getById);
+    //app.get('/lugar/zone',lugarController.getById(id));
 };
