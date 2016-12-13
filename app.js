@@ -10,7 +10,7 @@ app.use(restify.fullResponse());
 app.use(restify.bodyParser());
 app.use(restify.queryParser());
 
-app.listen(config.port, function() {
+app.listen(config.port,config.host, function() {
     console.log('server listening on port number', config.port);
     
 });

@@ -1,4 +1,4 @@
-module.exports=(function UsuarioSchema(){
+module.exports=function UsuarioSchema(){
   var mongoose=require('../db').mongoose;
   var schema={
     nombre: { type : string, required:true} ,
@@ -15,4 +15,4 @@ module.exports=(function UsuarioSchema(){
 };
   return Usuario;
 
-};)();
+};

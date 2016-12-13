@@ -62,9 +62,7 @@ function lugarController() {
                         'error': err
                     });
                 } else {
-                    return res.send({
-                        'Lugares': result
-                    });
+                    return res.send(result);
                 }
             });
             return next();
