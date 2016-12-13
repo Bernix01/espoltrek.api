@@ -1,4 +1,4 @@
-module.exports = function(app) {
+module.exports = function(app,restify) {
     var usuarioController = require('../controllers/usuarioController');
     var lugarController = require('../controllers/lugarController');
     app.get('/', function(req, res, next) {
@@ -14,8 +14,8 @@ module.exports = function(app) {
     app.post('/lugar/:id/tags', lugarController.addtag); //Gets ALL students details API
     app.post('/login', usuarioController.login);
     app.get('/usuario', usuarioController.getUsuarios);
-    app.get('/img/', restify.serveStatic({
-        directory: '../imagenes/',
+    app.get(/\/img\/.*/, restify.serveStatic({
+        directory: 'imagenes/',
         default: 'index.html'
     }));
     //app.get('/lugar/:id', lugarController.getLugarPorId);

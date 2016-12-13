@@ -16,5 +16,5 @@ app.listen(config.port,config.host, function() {
 });
 
 
-var routes = require('./routes/rutasLugar')(app);
+var routes = require('./routes/rutasLugar')(app,restify);
 require('./seed');
