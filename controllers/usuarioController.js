@@ -5,12 +5,15 @@ function usuarioController () {
 
 	// Creating New Student
 	this.createUsuario = function (req, res, next) {
-		var nombre = req.params.nombre;
+		var nombres = req.params.nombres;
+		var apellidos = req.params.apellidos;
 		var email = req.params.email;
-		var id = req.params.id;
 		var contrasenia = req.params.contrasenia;
+		var nickname = req.params.nickname;
+		var matricula = req.params.matricula;
+		var cedula = req.params.cedula;
 
-		Usuario.create({nombre:nombre,email:email,id:id,contrasenia:contrasenia}, function(err, result) {
+		Usuario.create({nombres:nombres,apellidos:apellidos,email:email,contrasenia:contrasenia, cedula:cedula,matricula:matricula,nickname:nickname}, function(err, result) {
 			if (err) {
 				console.log(err);
 				return res.send({'error':err});
@@ -34,6 +37,19 @@ function usuarioController () {
       }
     });
   };
+	this.getUsuarioPorCredenciales = function(req,res,next){
+		var nickname = req.params.nickname;
+		var contrasenia = req.params.contrasenia;
+		Usuario.find({ nickname:nickname,contrasenia:contrasenia  }, function(err, user) {
+  if (err) {
+		console.log(err);
+		return res.send({'error':err});}
+
+  else {
+  	return res.send ({'Usuario: ': result});
+	}
+});
+	};
 
 return this;
 
