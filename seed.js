@@ -19,11 +19,12 @@ Lugar.find({}).remove().then(() => {
     });
 });
 Usuario.find({}).remove().then(() => {
+    console.log("fsdas");
     Usuario.create({
         nombres: 'John',
         apellidos: 'Doe',
-        nickname: "johndoe1",
-        email : 'john@espol.edu.ec',
+        nickname: 'johndoe1',
+        email: 'john@espol.edu.ec',
         contrasenia : '12345'
     }).then(()=>{
         console.log("datos de usuario preeliminares.");

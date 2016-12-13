@@ -4,7 +4,7 @@ var UsuarioSchema= function (){
     nombres: { type : String, required:true} ,
     apellidos:{type:String, required:true},
     nickname:{type:String, required:true},
-    id:{type:String, required:true},
+
     email:{type:String, required:true},
     contrasenia:{type:String, required:true},
     cedula:{type:String, required:false},
@@ -12,10 +12,11 @@ var UsuarioSchema= function (){
 
   }
   var usuarioSchema=mongoose.Schema(schema);
+  usuarioSchema.methods.validPassword = function(cb) {
+  return cb==this.contrasenia;};
+
   var Usuario=mongoose.model('Usuario',usuarioSchema);
-  Usuario.methods.validPassword = function(cb) {
-  return cb==this.contrasenia;
-};
+
   return Usuario;
 
 };
