@@ -5,8 +5,9 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "restify": "*",
-    "mongoose": "*"
+    "express": "^4.14.0",
+    "mongoose": "*",
+    "restify": "*"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
