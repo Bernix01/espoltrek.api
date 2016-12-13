@@ -42,25 +42,28 @@ function usuarioController () {
 
 
     this.login = function(req, res, next) {
-        var user = req.params.us;
+        var nickname = req.params.nickname;
         var psw = req.params.psw;
         Usuario.findOne({
-            nickname: user
+            nickname: nickname
         }, function(err, user) {
             if (err) {
                 return done(err);
             }
             if (!user) {
-                return done(null, false, {
-                    message: 'Incorrect username.'
-                });
+                return res.send({mensaje:'Nombre de usuario incorrecto',
+																valido: false
+																});
             }
-            if (!user.validPassword(password)) {
-                return done(null, false, {
-                    message: 'Incorrect password.'
-                });
+            if (!user.validPassword(psw)) {
+                return res.send({mensaje:'Contraseña incorrecta',
+																valido: false
+							});
             }
-            return done(null, user);
+            return res.send({mensaje:"Ingreso exitoso",
+														valido:true,
+														usuario: user
+					});
         });
     }
 
