@@ -12,7 +12,8 @@ module.exports = function(app) {
     app.get('/lugar', lugarController.getLugares); //Gets ALL students details API
     app.post('/lugar', lugarController.createLugar); //Gets ALL students details API
     app.post('/lugar/:id/tags', lugarController.addtag); //Gets ALL students details API
-    app.post('/login/',usuarioController.login)
+    app.post('/login/',usuarioController.login);
+    app.get('/lugar/:id', lugarController.getLugarPorId);
     //app.get('/lugar/:id',lugarController.getById);
     //app.get('/lugar/zone',lugarController.getById(id));
 };

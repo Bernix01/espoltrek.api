@@ -38,19 +38,7 @@ function usuarioController () {
       }
     });
   };
-	this.getUsuarioPorCredenciales = function(req,res,next){
-		var nickname = req.params.nickname;
-		var contrasenia = req.params.contrasenia;
-		Usuario.find({ nickname:nickname,contrasenia:contrasenia  }, function(err, user) {
-  		if (err) {
-				console.log(err);
-				return res.send({'error':err});}
 
-  			else {
-  			return res.send ({'Usuario: ': result});
-				}
-			});
-	};
 
 
     this.login = function(req, res, next) {

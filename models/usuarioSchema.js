@@ -14,7 +14,7 @@ module.exports=(function UsuarioSchema(){
   var usuarioSchema=mongoose.Schema(schema);
   var Usuario=mongoose.model('Usuario',usuarioSchema);
   Usuario.methods.validPassword = function(cb) {
-  return this.model('Animal').find({ type: this.type }, cb);
+  return cb==this.contrasenia;
 };
   return Usuario;
 
