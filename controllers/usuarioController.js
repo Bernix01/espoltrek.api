@@ -1,6 +1,6 @@
 //This Controller deals with all functionalities of Student
 
-<<<<<<< HEAD
+
 function usuarioController () {
 	var Usuario = require('../models/usuarioSchema');
 
