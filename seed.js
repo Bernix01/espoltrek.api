@@ -9,302 +9,280 @@ var Usuario = require('./models/usuarioSchema');
 
 Lugar.find({}).remove().then(() => {
     Lugar.create({
-        "nombre": "1",
+        "nombre": "Rectorado",
         "lat": -2.147533,
         "lng": -79.964558,
-        "imagen": "rectorado",
-        "descripcion": "rectorado",
-        "tag": "",
+        "imagen": "imagenes/fiec_nueva_1.jpg",
+        "descripcion": "/imagenes/auditorio_fimcp.jpg",
+        "tag":""
     },{
-        "nombre": "1B",
+        "nombre": "Tesorería",
         "lat": -2.147817,
         "lng": -79.963775,
-        "imagen": "tesoreria",
-        "descripcion": "tesoreria",
-        "tag": "",
+        "imagen": "/imagenes/fiec_parqueo_profesores.jpg",
+        "descripcion": "Bloque 1B-Tesoreria",
+        "tag":""
     },{
-        "nombre": "2",
+        "nombre": "Biblioteca",
         "lat": -2.147548,
         "lng": -79.966151,
-        "imagen": "biblioteca",
+        "imagen": "/imagenes/fiec_parqueo_profesores.jpg",
         "descripcion": "biblioteca",
-        "tag": "",
+        "tag":""
     },{
         "nombre": "7",
         "lat": -2.146331,
         "lng": -79.964692,
-        "imagen": "malicia:comedor",
+        "imagen": "/imagenes/fiec_nueva_1.jpg",
         "descripcion": "malicia",
-        "tag": "",
+        "tag":""
     },{
-        "nombre": "9",
+        "nombre": "FEPOL",
         "lat": -2.145983,
         "lng": -79.966307,
-        "imagen": "fepol",
+        "imagen": "/imagenes/auditorio_fimcp.jpg",
         "descripcion": "fepol",
-        "tag": "",
+        "tag":""
     },{
-        "nombre": "15A",
+        "nombre": "15A - FIEC nueva",
         "lat": -2.144615,
         "lng": -79.967794,
         "imagen": "fiec nueva:nueva fiec",
         "descripcion": "/imagenes/fiec_nueva_1.jpg",
-        "tag": "",
+        "tag":""
     },{
-        "nombre": "16A",
+        "nombre": " Bloque 16A",
         "lat": -2.145771,
         "lng": -79.96679,
         "imagen": "/imagenes/fiec_parqueo_profesores.jpg",
-        "descripcion": "lab_fiec",
-        "tag": "",
+        "descripcion": "laboratorios de computacion:laboratorios de computacion de la fiec",
+        "tag":""
     },{
-        "nombre": "16C",
+        "nombre": "16C - Laboratorios de computación",
         "lat": -2.145101,
         "lng": -79.967257,
-        "imagen": "laboratorios de computacion:laboratorios de computacion de la fiec",
-        "descripcion": "lab_comp_fiec",
-        "tag": "",
+        "imagen": "/imagenes/fiec_parqueo_profesores.jpg",
+        "descripcion": "Laboratorios de computacion de la fiec",
+        "tag":""
     },{
         "nombre": "18B",
         "lat": -2.144752,
         "lng": -79.966353,
-        "imagen": "laboratorio de ing mecanica:laboratorios de ing mecanica",
-        "descripcion": "lab_ing_mecanica",
-        "tag": "",
+        "imagen": "imagenes/fiec_nueva_1.jpg",
+        "descripcion": "laboratorio de ing mecanica:laboratorios de ing mecanic",
+        "tag":""
     },{
-        "nombre": "19A",
+        "nombre": "Bloque 19A",
         "lat": -2.145969,
         "lng": -79.965787,
-        "imagen": "ict:edificio inteligente ict",
-        "descripcion": "ict",
-        "tag": "",
+        "imagen": "imagenes/fiec_nueva_1.jpg",
+        "descripcion": "ict:edificio inteligente ict",
+        "tag":""
     },{
-        "nombre": "20A",
+        "nombre": "Bloque 20A",
         "lat": -2.145529,
         "lng": -79.965412,
-        "imagen": "facultad de la tierra:facultad de ingenieria en ciencias de la tierra",
-        "descripcion": "fict",
-        "tag": "",
+        "imagen": " imagenes/auditorio_fimcp.jpg",
+        "descripcion": "facultad de la tierra:facultad de ingenieria en ciencias de la tierra",
+        "tag": ""
     },{
-        "nombre": "20D",
+        "nombre": "Bloque 20D",
         "lat": -2.146204,
         "lng": -79.965045,
-        "imagen": "banco del pacifico:banco pacifico:banco:bienestar estudiantil",
-        "descripcion": "bienestar_estudiantil",
-        "tag": "",
+        "imagen": "imagenes/fiec_parqueo_profesores.jpg",
+        "descripcion": "banco pacifico:banco:bienestar estudiantil",
+        "tag": ""
     },{
-        "nombre": "21",
+        "nombre": "FEN",
         "lat": -2.147737,
         "lng": -79.968827,
-        "imagen": "facultad de ciencias sociales y humanisticas:fen",
-        "descripcion": "",
-        "tag": "",
+        "imagen": "imagenes/fiec_parqueo_profesores.jpg",
+        "descripcion": "facultad de ciencias sociales y humanisticas:fen",
+        "tag": ""
     },{
-        "nombre": "24A",
+        "nombre": "Bloque 24A",
         "lat": -2.145421,
         "lng": -79.965952,
-        "imagen": "fiec vieja:aulas de la facultad electectrica:aulas ingenieria electrica:aulas fiec",
-        "descripcion": "fiec_vieja",
-        "tag": "",
+        "imagen": "imagenes/fiec_vieja_5.jpg",
+        "descripcion": "fiec vieja:aulas de la facultad electectrica:aulas ingenieria electrica:aulas fiec",
+        "tag": ""
     },{
-        "nombre": "24C",
+        "nombre": "Bloque 24C",
         "lat": -2.145016,
         "lng": -79.965839,
-        "imagen": "aulas de mecanica",
+        "imagen": "imagenes/auditorio_fimcp.jpg",
         "descripcion": "aulas_mecanica",
-        "tag": "",
+        "tag": ""
     },{
-        "nombre": "24D",
+        "nombre": "Bloque 24D",
         "lat": -2.145831,
         "lng": -79.965582,
-        "imagen": "aulas de ict",
-        "descripcion": "aulas_icm",
-        "tag": "",
+        "imagen": "imagenes/fiec_nueva_1.jpg",
+        "descripcion": "aulas de icm",
+        "tag":""
     },{
-        "nombre": "24E",
+        "nombre": " Bloque 24E",
         "lat": -2.144202,
         "lng": -79.966297,
-        "imagen": "aulas y labs de ing mecanica",
-        "descripcion": "",
-        "tag": "",
+        "imagen": "imagenes/fiec_vieja_5.jpg",
+        "descripcion": "aulas y labs de ing mecanica",
+        "tag":""
     },{
-        "nombre": "25",
+        "nombre": "Bloque 25",
         "lat": -2.146461,
         "lng": -79.967109,
-        "imagen": "gobierno inst fisica y matematica:departamento de fisica:departamento de matematicas",
-        "descripcion": "icm",
-        "tag": "",
+        "imagen": "imagenes/fiec_vieja_5.jpg",
+        "descripcion": "icm gobierno inst fisica y matematica:departamento de fisica:departamento de matematicas",
+        "tag":""
     },{
-        "nombre": "26",
+        "nombre": "Bloque 26C",
         "lat": -2.146913,
         "lng": -79.967148,
-        "imagen": "gobierno inst quimica y humanidades:departamento de quimica",
-        "descripcion": "icqm",
-        "tag": "",
+        "imagen": "imagenes/fiec_vieja_5.jpg",
+        "descripcion": "icqm gobierno inst quimica y humanidades:departamento de quimica",
+        "tag":""
     },{
-        "nombre": "26A",
+        "nombre": "Bloque 26A",
         "lat": -2.147529,
         "lng": -79.96789,
-        "imagen": "auditorio iche",
+        "imagen": "imagenes/fiec_vieja_5.jpg",
         "descripcion": "auditorio_iche",
-        "tag": "",
+        "tag":""
     },{
         "nombre": "27A",
         "lat": -2.146718,
         "lng": -79.967689,
         "imagen": "laboratorio de fisica:laboratorio de quimica",
         "descripcion": "lab_fisca_y_quimica",
-        "tag": "",
+        "tag":
     },{
-        "nombre": "28",
+        "nombre": "CEMA",
         "lat": -2.14614,
         "lng": -79.964258,
-        "imagen": "cema",
+        "imagen": "imagenes/fiec_vieja_5.jpg",
         "descripcion": "cema",
-        "tag": "",
+        "tag":""
     },{
-        "nombre": "30",
+        "nombre": "Arqueología",
         "lat": -2.145177,
         "lng": -79.965049,
         "latt": -2.145129,
         "lngg": " -79.965197",
-        "imagen": "arqueologia",
+        "imagen": "imagenes/fiec_parqueo_profesores.jpg",
         "descripcion": "arqueologia",
-        "tag": "",
+        "tag":""
     },{
-        "nombre": "31",
+        "nombre": "Bloque 31B",
         "lat": -2.148616,
         "lng": -79.967469,
-        "imagen": "celex:basico nuevo:basico celex",
-        "descripcion": "celex",
-        "tag": "",
+        "imagen": "imagenes/fiec_nueva_1.jpg",
+        "descripcion": "celex:basico nuevo",
+        "tag":""
     },{
-        "nombre": "32A",
+        "nombre": "Bloque 32A",
         "lat": -2.146928,
         "lng": -79.966768,
-        "imagen": "basico viejo",
+        "imagen": "imagenes/fiec_vieja_5.jpg",
         "descripcion": "basico_viejo",
-        "tag": "",
+        "tag": ""
     },{
-        "nombre": "60",
+        "nombre": "FIMCBOR",
         "lat": -2.146776,
         "lng": -79.962867,
-        "imagen": "gobierno de maritima y c. del mar",
-        "descripcion": "fimcbor",
-        "tag": "",
+        "imagen": "imagenes/fiec_vieja_5.jpg",
+        "descripcion": "gobierno de maritima y c. del mar",
+        "tag":""
     },{
-        "nombre": "61",
+        "nombre": "Aula de Marítima",
         "lat": -2.146684,
         "lng": -79.963286,
-        "imagen": "aulas maritima:maritima:narnia",
+        "imagen": "imagenes/fiec_vieja_5.jpg",
         "descripcion": "aula_maritima",
-        "tag": "",
+        "tag":""
     },{
-        "nombre": "62",
+        "nombre": "62-Laboratorio de acuicultura",
         "lat": -2.146625,
         "lng": -79.962734,
-        "imagen": "laboratorio de acuicultura:csa",
+        "imagen": "imagenes/fiec_nueva_1.jpg",
         "descripcion": "lab_acuicultura",
-        "tag": "",
+        "tag":""
     },{
-        "nombre": "70",
+        "nombre": "Coliseo",
         "lat": -2.145025,
         "lng": -79.96415,
-        "imagen": "gimnasio:coliseo",
+        "imagen": "imagenes/auditorio_fimcp.jpg",
         "descripcion": "coliseo",
-        "tag": "",
+        "tag":""
     },{
-        "nombre": "74",
+        "nombre": "74 - CEPROEM ",
         "lat": -2.148773,
         "lng": -79.964967,
-        "imagen": "ceproem",
+        "imagen": "imagenes/fiec_parqueo_profesores.jpg",
         "descripcion": "ceproem",
-        "tag": "",
+        "tag":""
     },{
-        "nombre": "75A",
+        "nombre": "caseta de fotocopias fcsh:cabana de copias",
         "lat": -2.147291,
         "lng": -79.966992,
-        "imagen": "caseta de fotocopias fcsh:cabana de copias",
+        "imagen": "imagenes/fiec_nueva.jpg",
         "descripcion": "tesoreria_copia",
-        "tag": "",
+        "tag":""
     },{
-        "nombre": "76",
+        "nombre": "Bar de mecánica",
         "lat": -2.14506,
         "lng": -79.966384,
-        "imagen": "patio de comidas:cocacola:bar de mecanica",
+        "imagen": "imagenes/fiec_parqueo_profesores.jpg",
         "descripcion": "bar_mecanica",
-        "tag": "",
+        "tag":
     },{
         "nombre": "FIEC",
         "lat": -2.145134,
         "lng": -79.967095,
-        "latt": -2.145632,
-        "lngg": "-79.968279:-2.146045",
-        "imagen": "-79.966579:-2.145603",
+        "imagen": "imagenes/fiec_nueva_1.jpg",
         "descripcion": "-79.966361:-2.145777",
-        "tag": "-79.965740:-2.145247",
-        "FIELD9": "-79.965612:-2.144779",
-        "FIELD10": "-79.966782:-2.143922",
-        "FIELD11": "-79.967806",
-        "FIELD12": null
+        "tag": ""
     },{
         "nombre": "FIMCP",
         "lat": -2.144339,
         "lng": -79.966041,
-        "latt": -2.144695,
-        "lngg": "-79.967007:-2.145305",
-        "imagen": "-79.965416:-2.144056",
+        "imagen": "imagenes/auditorio_fimcp.jpg",
         "descripcion": "-79.965195 :-2.143577",
-        "tag": "-79.966604",
+        "tag": ""
     },{
         "nombre": "FCNM",
         "lat": -2.14712,
         "lng": -79.967363,
-        "latt": -2.14876,
-        "lngg": "-79.968220:-2.149033",
-        "imagen": "-79.967126:-2.146615",
+        "imagen": "imagenes/fiec_nueva_1.jpg",
         "descripcion": "-79.966488:-2.146260",
-        "tag": "-79.966954:-2.146105",
-        "FIELD9": "-79.968338:-2.146866",
-        "FIELD10": "-79.968349:-2.147048",
-        "FIELD11": "-79.967083:-2.147922",
-        "FIELD12": -79.967426
+        "tag": ""
     },{
         "nombre": "FCSH",
         "lat": -2.147505,
         "lng": -79.968109,
-        "latt": -2.147516,
-        "lngg": "-79.969139:-2.148299",
-        "imagen": "-79.968967:-2.148438",
+        "imagen": "imagenes/fiec_parqueo_profesores.jpg",
         "descripcion": "-79.968431:-2.147307",
-        "tag": "-79.967508:-2.147339"
+        "tag": ""
     },{
         "nombre": "FICT",
         "lat": -2.145728,
         "lng": -79.965279,
-        "latt": -2.145881,
-        "lngg": "-79.965797:-2.145270",
-        "imagen": "-79.965499:-2.145581",
+        "imagen": "imagenes/fiec_parqueo_profesores.jpg",
         "descripcion": "-79.964490:-2.146010",
-        "tag": "-79.964688",
+        "tag": ""
     },{
         "nombre": "FIMCBOR",
         "lat": -2.146539,
-        "lng": -79.962856,
-        "latt": -2.146911,
         "lngg": "-79.963547:-2.147107",
-        "imagen": "-79.962639:-2.146083",
+        "imagen": "imagenes/fiec_nueva_1.jpg",
         "descripcion": "-79.962293:-2.145981",
-        "tag": "-79.962615:-2.146345"
+        "tag": ""
     },{
         "nombre": "EDCOM",
         "lat": -2.143777,
         "lng": -79.962331,
-        "latt": -2.144313,
-        "lngg": "-79.962711:-2.143000",
-        "imagen": "-79.962325:-2.143708",
+        "imagen": "imagenes/auditorio_fimcp.jpg",
         "descripcion": "-79.961043",
-        "tag": "",
+        "tag":""
     }).then(() => {
         console.log("datos de lugar preeliminares.");
     });
