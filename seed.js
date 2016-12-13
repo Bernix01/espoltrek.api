@@ -9,12 +9,6 @@ var Usuario = require('./models/usuarioSchema');
 
 Lugar.find({}).remove().then(() => {
     Lugar.create({
-        nombre: 'Lugar1',
-        descripcion: 'descripcion',
-        etiquetas: ['a', 'b', 'c'],
-        lat: -23.34234,
-        lng: 2.35453
-    }, {
         "nombre": "1",
         "lat": -2.147533,
         "lng": -79.964558,
@@ -54,13 +48,13 @@ Lugar.find({}).remove().then(() => {
         "lat": -2.144615,
         "lng": -79.967794,
         "imagen": "fiec nueva:nueva fiec",
-        "descripcion": "fiec_nueva",
+        "descripcion": "/imagenes/fiec_nueva_1.jpg",
         "tag": "",
     },{
         "nombre": "16A",
         "lat": -2.145771,
         "lng": -79.96679,
-        "imagen": "laboratorios de la fiec:laboratorios fiec",
+        "imagen": "/imagenes/fiec_parqueo_profesores.jpg",
         "descripcion": "lab_fiec",
         "tag": "",
     },{
