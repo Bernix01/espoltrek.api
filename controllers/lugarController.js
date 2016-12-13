@@ -13,12 +13,12 @@ function lugarController() {
         var imagen = req.params.imagen;
 
         Lugar.create({
-        	nombre:nombre,
-        	descripcion:descripcion,
-        	etiquetas:etiquetas,
-        	lat:lat,
-        	lng:lng,
-        	imagen:imagen
+            nombre: nombre,
+            descripcion: descripcion,
+            etiquetas: etiquetas,
+            lat: lat,
+            lng: lng,
+            imagen: imagen
 
         }, function(err, result) {
             if (err) {
@@ -35,31 +35,43 @@ function lugarController() {
         });
     };
 
-    this.addtag = function(req,res,next){
-    	var etiqueta = req.params.etiqueta;
-    	Lugar.find({_id:req.params.id})
+    this.addtag = function(req, res, next) {
+        var etiqueta = req.params.etiqueta;
+        Lugar.findOneAndUpdate({
+                _id: req.params.id},
+                {}//aquí se supone va la nueva data pero no sé si actualice el arreglo...
+                ,
+                {
+                    upsert: true
+                },
+                function(err, doc) {
+                    if (err) return res.send(500, {
+                        error: err
+                    });
+                    return res.send("succesfully saved");
+                });
+        };
+
+        // Fetching Details of Places
+        this.getLugares = function(req, res, next) {
+
+            Lugar.find({}, function(err, result) {
+                if (err) {
+                    console.log(err);
+                    return res.send({
+                        'error': err
+                    });
+                } else {
+                    return res.send({
+                        'Lugares': result
+                    });
+                }
+            });
+            return next();
+        };
+
+        return this;
+
     };
 
-    // Fetching Details of Places
-    this.getLugares = function(req, res, next) {
-
-        Lugar.find({}, function(err, result) {
-            if (err) {
-                console.log(err);
-                return res.send({
-                    'error': err
-                });
-            } else {
-                return res.send({
-                    'Lugares': result
-                });
-            }
-        });
-        return next();
-    };
-
-    return this;
-
-};
-
-module.exports = new lugarController();
+    module.exports = new lugarController();

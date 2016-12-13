@@ -9,7 +9,7 @@ var LugarSchema = function() {
             type: String,
             required: false
         },
-        etiquetas: {
+        tags: {
             type: [String],
             required: false
         },
