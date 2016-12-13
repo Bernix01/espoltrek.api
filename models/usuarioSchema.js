@@ -1,11 +1,11 @@
-module.exports=(function UsuarioSchema(){
+var UsuarioSchema= function (){
   var mongoose=require('../db').mongoose;
   var schema={
-    nombres: { type : string, required:true} ,
+    nombres: { type : String, required:true} ,
     apellidos:{type:String, required:true},
     nickname:{type:String, required:true},
     id:{type:String, required:true},
-    email:{type:String, required:true}
+    email:{type:String, required:true},
     contrasenia:{type:String, required:true},
     cedula:{type:String, required:false},
     matricula:{type:Number, required:false}
@@ -18,4 +18,5 @@ module.exports=(function UsuarioSchema(){
 };
   return Usuario;
 
-};)();
+};
+module.exports = (UsuarioSchema)();
