@@ -1,4 +1,4 @@
-module.exports=function UsuarioSchema(){
+module.exports=(function UsuarioSchema(){
   var mongoose=require('../db').mongoose;
   var schema={
     nombre: { type : string, required:true} ,
@@ -10,6 +10,9 @@ module.exports=function UsuarioSchema(){
   }
   var usuarioSchema=mongoose.Schema(schema);
   var Usuario=mongoose.model('Usuario',usuarioSchema);
+  Usuario.methods.validPassword = function(cb) {
+  return this.model('Animal').find({ type: this.type }, cb);
+};
   return Usuario;
 
-};
+};)();
