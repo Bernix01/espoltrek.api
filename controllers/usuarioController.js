@@ -57,13 +57,14 @@ function usuarioController() {
 
 
     this.login = function(req, res, next) {
-        var nickname = req.params.nickname;
-        var psw = req.params.psw;
+        var nickname = req.params.email;
+        var psw = req.params.contrasenia;
+        console.log(nickname+"  "+psw);
         Usuario.findOne({
             email: nickname
         }, function(err, user) {
             if (err) {
-                return done(err);
+                return res.send(err);
             }
             if (!user) {
                 return res.send({

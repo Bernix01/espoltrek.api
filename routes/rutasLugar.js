@@ -14,9 +14,8 @@ module.exports = function(app,restify) {
     app.post('/lugar/:id/tags', lugarController.addtag); //Gets ALL students details API
     app.post('/login', usuarioController.login);
     app.get('/usuario', usuarioController.getUsuarios);
-    app.get(/\/img\/.*/, restify.serveStatic({
-        directory: 'imagenes/',
-        default: 'index.html'
+    app.get(/\/imagenes\/?.*/, restify.serveStatic({
+        directory: './imagenes/'
     }));
     //app.get('/lugar/:id', lugarController.getLugarPorId);
     //app.get('/lugar/:id',lugarController.getById);
